@@ -6,7 +6,7 @@
   "license": "MIT",
   "description": "A'Space adapter for Amdkn/OpenDuet (gel f52288f, F8 pas 7) — stdlib only, no upstream code",
   "scripts": {
-    "test": "bun test tests/adapter.test.ts"
+    "test": "bun test ./tests/adapter.checks.ts"
   },
   "aspace": {
     "gel": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
