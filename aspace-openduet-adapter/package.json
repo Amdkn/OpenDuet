@@ -1,0 +1,17 @@
+{
+  "name": "@aspace-v5/openduet-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "A'Space adapter for Amdkn/OpenDuet (gel f52288f, F8 pas 7) — stdlib only, no upstream code",
+  "scripts": {
+    "test": "bun test tests/adapter.test.ts"
+  },
+  "aspace": {
+    "gel": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+    "bind": "be7ec832379fd1f76aa27704ae80cdf9fc9cb7c1",
+    "fork": "Amdkn/OpenDuet",
+    "skin": "openduet"
+  }
+}

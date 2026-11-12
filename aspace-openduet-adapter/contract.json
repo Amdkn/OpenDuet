@@ -1,0 +1,68 @@
+{
+  "adapter": "aspace-openduet-adapter",
+  "version": "0.1.0",
+  "fork": "Amdkn/OpenDuet",
+  "upstream": "CopilotKit/OpenDuet",
+  "gel": "f52288fff5ccdbd3de428d573d9f026fce5ff480",
+  "gel_short": "f52288f",
+  "bind": "be7ec832379fd1f76aa27704ae80cdf9fc9cb7c1",
+  "bind_blob": "002690a18645ad3c2360bea65aaf28d0dad1e37f",
+  "family": "CORE_A0_KERNEL",
+  "owner": "A0-AMADEUS / S1-RICK",
+  "license": "MIT",
+  "skin": {
+    "id": "openduet",
+    "name": "OpenDuet",
+    "kind": "skin",
+    "trait": "proactif humain-dans-la-boucle : morning brief, Tasks, check-ins, approbations avec reprise"
+  },
+  "gateway": {
+    "endpoint": "http://127.0.0.1:31415/v1/chat/completions",
+    "chain": [
+      "freellmapi/auto",
+      "claude-sonnet-4-5",
+      "qwen3.8-max",
+      "gemini-3.8-flash",
+      "deepseek-v4-flash"
+    ],
+    "retest_minutes": 15,
+    "forbidden_keys": [
+      "CPK_INTELLIGENCE_API_KEY",
+      "CPK_TELEMETRY_ID",
+      "OPENAI_API_KEY"
+    ]
+  },
+  "computer_service": {
+    "port": 4100,
+    "header": "x-openbot-bot-id"
+  },
+  "triage": {
+    "ported": 12,
+    "surfaces": 1,
+    "abandoned": 4,
+    "total": 17
+  },
+  "telemetry_triggers": {
+    "sink-sdk": {
+      "applies": "APPLIQUE",
+      "verdict": "ABANDONNÉ"
+    },
+    "product-telemetry": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    },
+    "desktop-telemetry": {
+      "applies": "APPLIQUE",
+      "verdict": "ABANDONNÉ"
+    },
+    "setup-telemetry": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    },
+    "otel-export": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    }
+  },
+  "dependency_pas6": "NAMED — fonctions prime-agent (RLM, /refine, Continual Harness) absentes de la base 655b2a4 ; le chemin /refine de la surface est conditionnel au merge de 9050a1f ; le reste est inconditionnel (§D9)"
+}
